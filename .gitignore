@@ -49,7 +49,7 @@ tmp
 package-lock.json
 
 
-app
+
 .deploy
 /backup/*
 /dist
