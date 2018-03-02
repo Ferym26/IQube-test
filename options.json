@@ -1,0 +1,16 @@
+{
+	"project": {
+		"type": "land",
+		"name": "IQube_test",
+		"themeColor": "#000",
+		"date": "01.18"
+	},
+	"path": {
+		"baseDir": "app",
+		"sass": "sass",
+		"pug": "pug",
+		"css": "css",
+		"front": "frontend",
+		"core": "core"
+	}
+}

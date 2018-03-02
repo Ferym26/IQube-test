@@ -1,0 +1,30 @@
+.form
+	.form__inner
+		.form__title
+			h3.form__title-text Оформление заказа
+
+		form(method='POST' action='').form#order_form
+
+			.field
+				select#country_code_selector.field__select(name='country_code')
+					option(value='RU') Россия
+					option(value='RU') Россия
+
+			.field
+				input.field__input(type='text' name='name' placeholder='Ваше имя')
+
+			.field
+				input.field__input.only_number(type='text' name='phone' placeholder='Номер телефона')
+
+
+			.price
+				.price__row
+					span.price__old {{ old_price }} {{ currency }}
+				.price__row
+					span.price__new {{ price }} {{ currency }}
+
+			.total
+				p.total__ship #[span.total__title Доставка:] {{ shipment_price }} {{ currency }}
+				p.total__all #[span.total__title Итого:] {{ total_price|int }} {{ currency }}
+
+			+butn-b("center", "Заказать сейчас", "js_submit")

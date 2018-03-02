@@ -1,0 +1,88 @@
+/*==================   BUTTONS   ==================*/
+
+
+
+
+$butn--w:					300px
+$butn--fz:					20px
+$butn--fw:					700
+$butn--tt:					uppercase
+$butn--color:				#fff
+$butn--bg:					linear-gradient(to bottom, #ec1f24, #b61a1a)
+
+$butn--padding:				15px 5px
+$butn--borderRadius:		10px 
+
+
+
+
+
+
+.butn-field
+
+	.butn-size
+		display: inline-block
+		width: 100%
+		max-width: $butn--w
+		
+	.butn
+		position: relative
+		display: block
+		width: 100%
+
+		padding: $butn--padding
+		
+		text-align: center
+		font-size: $butn--fz
+		font-weight: $butn--fw
+		text-transform: $butn--tt
+		color: $butn--color
+		background: $butn--bg
+		text-decoration: none
+
+		border: none
+		outline: none
+		border-radius: $butn--borderRadius
+		box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35)
+
+		-webkit-user-select: none
+		-moz-user-select: none
+		-ms-user-select: none
+		user-select: none
+
+		cursor: pointer
+
+		transition: transform 0.3s ease-in
+		z-index: 20
+
+
+		&:hover
+			transform: scale(1.08)
+			text-decoration: none
+
+		&__text
+
+	&.butn--center
+		text-align: center
+
+	&.butn--left
+		text-align: left
+
+	&.butn--right
+		text-align: right
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================   /BUTTONS   ==================*/
