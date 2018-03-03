@@ -24,13 +24,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-photo-2 {
   background-image: url(../img/sprite.png);
-  background-position: -230px 0px;
+  background-position: -208px -127px;
   width: 194px;
   height: 105px;
 }
-.icon-photo-3 {
+.icon-photo-3 — копия {
   background-image: url(../img/sprite.png);
   background-position: 0px 0px;
+  width: 220px;
+  height: 117px;
+}
+.icon-photo-3 {
+  background-image: url(../img/sprite.png);
+  background-position: -230px 0px;
   width: 220px;
   height: 117px;
 }

@@ -20,6 +20,7 @@ const libs = {
 	gulpif: require('gulp-if'),
 
 	sprity: require('sprity'),
+	injectSvg: require('gulp-inject-svg'),
 
 	emitty: require('emitty').setup('frontend/pug', 'pug', {  makeVinylFile: true})	
 }
@@ -106,6 +107,20 @@ gulp.task('deploy', require(tasks + 'deploy')(gulp, plugins, ftp, op, libs));
 
 //Запуск локального сервера
 gulp.task('server', require(tasks + 'server')(browserSync, op));
+
+
+
+ 
+gulp.task('injectSvg', function() {
+ 
+  return gulp.src('app/*.html')
+    .pipe(libs.injectSvg({
+    	base: '/app'
+    }))
+    .pipe(gulp.dest('app/'));
+ 
+});
+
 
 
 
