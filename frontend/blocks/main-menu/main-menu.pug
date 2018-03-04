@@ -1,0 +1,93 @@
+
+.main-menu
+
+	.main-menu__inner
+
+		.logo
+			.logo__inner
+				.logo-big
+					img.logo-pic(src="img/logo.png", alt="logo")
+				//- .logo-small
+					img.logo-pic(src="img/logo-icon.png", alt="logo")
+		
+		nav.main-menu__list
+
+			a.main-menu__list-item.is-active(href="")
+				.main-menu__list-item-icon
+					+svg("menu-dis", "icon-svg")
+				span.main-menu__list-item-text Диспетчерская
+
+			a.main-menu__list-item(href="")
+				.main-menu__list-item-icon
+					+svg("menu-car", "icon-svg")
+				span.main-menu__list-item-text Машины
+			
+			a.main-menu__list-item(href="")
+				.main-menu__list-item-icon
+					+svg("menu-helm", "icon-svg")
+				span.main-menu__list-item-text Водители
+			
+			a.main-menu__list-item(href="")
+				.main-menu__list-item-icon
+					+svg("menu-client", "icon-svg")
+				span.main-menu__list-item-text Клиенты
+			
+			a.main-menu__list-item(href="")
+				.main-menu__list-item-icon
+					+svg("menu-clock", "icon-svg")
+				span.main-menu__list-item-text История заказов
+			
+			a.main-menu__list-item(href="")
+				.main-menu__list-item-icon
+					+svg("menu-chart", "icon-svg")
+				span.main-menu__list-item-text Отчёты
+			
+			a.main-menu__list-item(href="")
+				.main-menu__list-item-icon
+					+svg("menu-sup", "icon-svg")
+				span.main-menu__list-item-text Тех. поддержка
+			
+			a.main-menu__list-item(href="")
+				.main-menu__list-item-icon
+					+svg("menu-settings", "icon-svg")
+				span.main-menu__list-item-text Настройки
+
+		.tariff
+			.tariff__inner
+
+				.tariff__title
+					p.tariff__title-text Тарифы
+						span.tariff__title-arrow
+
+				.tariff__item
+					.tariff__item-wrap
+						.tariff__item-icon
+							+svg("tarif-1", "icon-svg")
+						h3.tariff__item-title Элит:
+						p.tariff__item-text посадка - 2.5 руб
+						p.tariff__item-text цена за км - 1.0 руб
+
+				.tariff__item
+					.tariff__item-wrap
+						.tariff__item-icon
+							+svg("tarif-2", "icon-svg")
+						h3.tariff__item-title Стандарт:
+						p.tariff__item-text посадка - 1.0 руб
+						p.tariff__item-text цена за км - 0.5 руб
+
+				.tariff__item
+					.tariff__item-wrap
+						.tariff__item-icon
+							+svg("tarif-3", "icon-svg")
+						h3.tariff__item-title Универсал:
+						p.tariff__item-text посадка - 2.0 руб
+						p.tariff__item-text цена за км - 0.9 руб
+
+				.tariff__item
+					.tariff__item-wrap
+						.tariff__item-icon
+							+svg("tarif-4", "icon-svg")
+						h3.tariff__item-title Минивен:
+						p.tariff__item-text посадка - 2.0 руб
+						p.tariff__item-text цена за км - 0.9 руб
+

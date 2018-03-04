@@ -19,18 +19,151 @@
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <body>
     <div class="wrapper">
-      <section class="section_1">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <p>1</p>
-              <svg class="icon">
-                <use xlink:href="./img/sprite.svg#handcuffs"></use>
-              </svg>
+      <div class="main-page">
+        <div class="main-menu">
+          <div class="main-menu__inner">
+            <div class="logo">
+              <div class="logo__inner">
+                <div class="logo-big"><img class="logo-pic" src="img/logo.png" alt="logo"></div>
+              </div>
+            </div>
+            <nav class="main-menu__list"><a class="main-menu__list-item is-active" href="">
+                <div class="main-menu__list-item-icon">
+                  <svg class="icon-svg">
+                    <use xlink:href="./img/sprite.svg#menu-dis"></use>
+                  </svg>
+                </div><span class="main-menu__list-item-text">Диспетчерская</span></a><a class="main-menu__list-item" href="">
+                <div class="main-menu__list-item-icon">
+                  <svg class="icon-svg">
+                    <use xlink:href="./img/sprite.svg#menu-car"></use>
+                  </svg>
+                </div><span class="main-menu__list-item-text">Машины</span></a><a class="main-menu__list-item" href="">
+                <div class="main-menu__list-item-icon">
+                  <svg class="icon-svg">
+                    <use xlink:href="./img/sprite.svg#menu-helm"></use>
+                  </svg>
+                </div><span class="main-menu__list-item-text">Водители</span></a><a class="main-menu__list-item" href="">
+                <div class="main-menu__list-item-icon">
+                  <svg class="icon-svg">
+                    <use xlink:href="./img/sprite.svg#menu-client"></use>
+                  </svg>
+                </div><span class="main-menu__list-item-text">Клиенты</span></a><a class="main-menu__list-item" href="">
+                <div class="main-menu__list-item-icon">
+                  <svg class="icon-svg">
+                    <use xlink:href="./img/sprite.svg#menu-clock"></use>
+                  </svg>
+                </div><span class="main-menu__list-item-text">История заказов</span></a><a class="main-menu__list-item" href="">
+                <div class="main-menu__list-item-icon">
+                  <svg class="icon-svg">
+                    <use xlink:href="./img/sprite.svg#menu-chart"></use>
+                  </svg>
+                </div><span class="main-menu__list-item-text">Отчёты</span></a><a class="main-menu__list-item" href="">
+                <div class="main-menu__list-item-icon">
+                  <svg class="icon-svg">
+                    <use xlink:href="./img/sprite.svg#menu-sup"></use>
+                  </svg>
+                </div><span class="main-menu__list-item-text">Тех. поддержка</span></a><a class="main-menu__list-item" href="">
+                <div class="main-menu__list-item-icon">
+                  <svg class="icon-svg">
+                    <use xlink:href="./img/sprite.svg#menu-settings"></use>
+                  </svg>
+                </div><span class="main-menu__list-item-text">Настройки</span></a></nav>
+            <div class="tariff">
+              <div class="tariff__inner">
+                <div class="tariff__title">
+                  <p class="tariff__title-text">Тарифы<span class="tariff__title-arrow"></span></p>
+                </div>
+                <div class="tariff__item">
+                  <div class="tariff__item-wrap">
+                    <div class="tariff__item-icon">
+                      <svg class="icon-svg">
+                        <use xlink:href="./img/sprite.svg#tarif-1"></use>
+                      </svg>
+                    </div>
+                    <h3 class="tariff__item-title">Элит:</h3>
+                    <p class="tariff__item-text">посадка - 2.5 руб</p>
+                    <p class="tariff__item-text">цена за км - 1.0 руб</p>
+                  </div>
+                </div>
+                <div class="tariff__item">
+                  <div class="tariff__item-wrap">
+                    <div class="tariff__item-icon">
+                      <svg class="icon-svg">
+                        <use xlink:href="./img/sprite.svg#tarif-2"></use>
+                      </svg>
+                    </div>
+                    <h3 class="tariff__item-title">Стандарт:</h3>
+                    <p class="tariff__item-text">посадка - 1.0 руб</p>
+                    <p class="tariff__item-text">цена за км - 0.5 руб</p>
+                  </div>
+                </div>
+                <div class="tariff__item">
+                  <div class="tariff__item-wrap">
+                    <div class="tariff__item-icon">
+                      <svg class="icon-svg">
+                        <use xlink:href="./img/sprite.svg#tarif-3"></use>
+                      </svg>
+                    </div>
+                    <h3 class="tariff__item-title">Универсал:</h3>
+                    <p class="tariff__item-text">посадка - 2.0 руб</p>
+                    <p class="tariff__item-text">цена за км - 0.9 руб</p>
+                  </div>
+                </div>
+                <div class="tariff__item">
+                  <div class="tariff__item-wrap">
+                    <div class="tariff__item-icon">
+                      <svg class="icon-svg">
+                        <use xlink:href="./img/sprite.svg#tarif-4"></use>
+                      </svg>
+                    </div>
+                    <h3 class="tariff__item-title">Минивен:</h3>
+                    <p class="tariff__item-text">посадка - 2.0 руб</p>
+                    <p class="tariff__item-text">цена за км - 0.9 руб</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+        <div class="main-content">
+          <div class="main-content__inner">
+            <div class="top-line">
+              <div class="top-line__inner">
+                <div class="top-line__left">
+                  <div class="time-box">
+                    <p class="time-box__time">12:30:45</p>
+                    <p class="time-box__day">Вторник</p>
+                    <p class="time-box__date">30 января</p>
+                  </div>
+                  <div class="order-count"><span class="order-count__plus">+3</span>
+                    <p class="order-count__num">48</p>
+                    <p class="order-count__descr">Сегодня обработано</p>
+                  </div>
+                </div>
+                <div class="top-line__right">
+                  <div class="search-top">
+                    <svg class="icon-svg">
+                      <use xlink:href="./img/sprite.svg#search"></use>
+                    </svg>
+                  </div>
+                  <div class="notific-top">
+                    <svg class="icon-svg">
+                      <use xlink:href="./img/sprite.svg#ding"></use>
+                    </svg>
+                  </div>
+                  <div class="user-top">
+                    <div class="user-top__ava"><img class="user-top__ava-img" src="img/disp-ava.jpg" alt="user avatar"></div>
+                    <div class="user-top__descr">
+                      <p class="user-top__name">Анна Лисичкина</p>
+                      <p class="user-top__prof">Диспетчер</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/common.js"></script>
   </body>

@@ -1,0 +1,38 @@
+
+.main-content
+
+	.main-content__inner
+		
+		.top-line
+
+			.top-line__inner
+
+				.top-line__left
+
+					.time-box
+						p.time-box__time 12:30:45
+						p.time-box__day Вторник
+						p.time-box__date 30 января
+
+					.order-count
+						span.order-count__plus +3
+						p.order-count__num 48
+						p.order-count__descr Сегодня обработано
+
+
+				.top-line__right
+
+					.search-top
+						+svg("search", "icon-svg")
+
+					.notific-top
+						+svg("ding", "icon-svg")
+
+					.user-top
+
+						.user-top__ava
+							img.user-top__ava-img(src="img/disp-ava.jpg", alt="user avatar")
+
+						.user-top__descr
+							p.user-top__name Анна Лисичкина
+							p.user-top__prof Диспетчер
