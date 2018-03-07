@@ -9,7 +9,7 @@ module.exports = function (browserSync, op) {
 			server: {
 				baseDir: 'app'
 			},
-			port: 3000,
+			port: 3030,
 			notify: false,
 			// reloadDelay: 200,
 			// tunnel: op.project.name //Demonstration page: http://projectname.localtunnel.me
