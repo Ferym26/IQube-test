@@ -2,81 +2,75 @@
 
 
 
+.butn
+	position: relative
+	display: inline-block
+	
+	text-align: center	
+	font-weight: 600	
+	color: #fff	
+	text-decoration: none
 
-$butn--w:					300px
-$butn--fz:					20px
-$butn--fw:					700
-$butn--tt:					uppercase
-$butn--color:				#fff
-$butn--bg:					linear-gradient(to bottom, #ec1f24, #b61a1a)
+	padding: 0 20px
 
-$butn--padding:				15px 5px
-$butn--borderRadius:		10px 
+	border: none
+	outline: none
+	border-radius: 10px	
 
+	user-select: none
+	cursor: pointer
+	transition: all 0.2s ease-in
+	z-index: 20
 
+	
 
-
-
-
-.butn-field
-
-	.butn-size
-		display: inline-block
-		width: 100%
-		max-width: $butn--w
-		
-	.butn
-		position: relative
-		display: block
-		width: 100%
-
-		padding: $butn--padding
-		
-		text-align: center
-		font-size: $butn--fz
-		font-weight: $butn--fw
-		text-transform: $butn--tt
-		color: $butn--color
-		background: $butn--bg
-		text-decoration: none
-
-		border: none
-		outline: none
-		border-radius: $butn--borderRadius
-		box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35)
-
-		-webkit-user-select: none
-		-moz-user-select: none
-		-ms-user-select: none
-		user-select: none
-
-		cursor: pointer
-
-		transition: transform 0.3s ease-in
-		z-index: 20
+	//SIZE
+	&.butn--xl
 
 
-		&:hover
-			transform: scale(1.08)
-			text-decoration: none
+	&.butn--lg
 
-		&__text
 
-	&.butn--center
-		text-align: center
+	&.butn--md
+		min-width: 170px
+		height: 40px
+		font-size: 16px
 
-	&.butn--left
-		text-align: left
 
-	&.butn--right
-		text-align: right
+	&.butn--sm
 
 
 
 
+	//BG-COLOR	
+	&.butn--blue
+		background-color: $color-accent
+
+		&:not([disabled])
+			&:hover
+				background-color: #0ba5d9
+	
 
 
 
+
+	&[disabled]
+		opacity: 0.7
+		cursor: default
+
+
+
+	//SHAPE
+	&.butn--round
+		border-radius: 40px
+
+
+	//CANCEL
+	&.butn--cancel
+		color: #919799
+		background-color: $trp
+		font-weight: 400
+	
 
 
 

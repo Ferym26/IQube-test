@@ -17,6 +17,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#000">
   <!--=============== Mobile Bar Color Theme ===============-->
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <body>
     <div class="wrapper">
       <div class="main-page">
@@ -142,14 +143,23 @@
                 </div>
                 <div class="top-line__right">
                   <div class="search-top">
-                    <svg class="icon-svg">
-                      <use xlink:href="./img/sprite.svg#search"></use>
-                    </svg>
+                    <div class="search-top__field">
+                      <input type="search" name="">
+                    </div>
+                    <div class="search-top__icon">
+                      <svg class="icon-svg">
+                        <use xlink:href="./img/sprite.svg#search"></use>
+                      </svg>
+                    </div>
                   </div>
                   <div class="notific-top">
-                    <svg class="icon-svg">
-                      <use xlink:href="./img/sprite.svg#ding"></use>
-                    </svg>
+                    <div class="notific-top__icon">
+                      <svg class="icon-svg">
+                        <use xlink:href="./img/sprite.svg#ding"></use>
+                      </svg>
+                    </div>
+                    <div class="notific-top__count">5</div>
+                    <div class="notific-top__popup"></div>
                   </div>
                   <div class="user-top">
                     <div class="user-top__ava"><img class="user-top__ava-img" src="img/disp-ava.jpg" alt="user avatar"></div>
@@ -158,6 +168,218 @@
                       <p class="user-top__prof">Диспетчер</p>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-line">
+              <div class="main-line__inner">
+                <div class="main-line__left">
+                  <div class="call-header">
+                    <div class="call-header__inner">
+                      <div class="call-header__icon">
+                        <svg class="icon-svg">
+                          <use xlink:href="./img/sprite.svg#taxi"></use>
+                        </svg>
+                      </div>
+                      <div class="call-header__menu">
+                        <ul class="call-header__menu-list">
+                          <li class="call-header__menu-item">Всего: <span class="call-header__menu-item-num js_call-menu-item__all">10</span></li>
+                          <li class="call-header__menu-item color-gray">Оф-лайн: <span class="call-header__menu-item-num js_call-menu-item__off">1</span></li>
+                          <li class="call-header__menu-item color-green">Свободные: <span class="call-header__menu-item-num js_call-menu-item__free">4</span></li>
+                          <li class="call-header__menu-item color-red">На заказе: <span class="call-header__menu-item-num js_call-menu-item__busy">5</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="call-wrap">
+                    <div class="call-item">
+                      <div class="call-item__client">
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-name">Марина</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-phone">+375 29 555 77 00</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <div class="rate"><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--half"></span><span class="rate-star rate-star--empt"></span><span class="rate-star rate-star--empt"></span></div>
+                        </div>
+                      </div>
+                      <div class="call-item__delay color-red">
+                        <p class="call-item__delay-time">1 минута</p>
+                        <p class="call-item__delay-descr">в ожидании</p>
+                      </div>
+                      <div class="call-item__butn">
+                        <button class="butn butn--md butn--blue">Принять звонок</button>
+                      </div>
+                    </div>
+                    <div class="call-item call-item--outbase">
+                      <div class="call-item__client">
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-name">Нет в базе</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-phone">+375 29 555 77 00</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <div class="rate"><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--half"></span><span class="rate-star rate-star--empt"></span><span class="rate-star rate-star--empt"></span></div>
+                        </div>
+                      </div>
+                      <div class="call-item__delay">
+                        <p class="call-item__delay-time">40 секунд</p>
+                        <p class="call-item__delay-descr">в ожидании</p>
+                      </div>
+                      <div class="call-item__butn">
+                        <button class="butn butn--md butn--blue">Принять звонок</button>
+                      </div>
+                    </div>
+                    <div class="call-item">
+                      <div class="call-item__client">
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-name">Марина</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-phone">+375 29 555 77 00</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <div class="rate"><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--half"></span><span class="rate-star rate-star--empt"></span><span class="rate-star rate-star--empt"></span></div>
+                        </div>
+                      </div>
+                      <div class="call-item__delay color-red">
+                        <p class="call-item__delay-time">1 минута</p>
+                        <p class="call-item__delay-descr">в ожидании</p>
+                      </div>
+                      <div class="call-item__butn">
+                        <button class="butn butn--md butn--blue">Принять звонок</button>
+                      </div>
+                    </div>
+                    <div class="call-item call-item--outbase">
+                      <div class="call-item__client">
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-name">Нет в базе</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-phone">+375 29 555 77 00</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <div class="rate"><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--half"></span><span class="rate-star rate-star--empt"></span><span class="rate-star rate-star--empt"></span></div>
+                        </div>
+                      </div>
+                      <div class="call-item__delay">
+                        <p class="call-item__delay-time">40 секунд</p>
+                        <p class="call-item__delay-descr">в ожидании</p>
+                      </div>
+                      <div class="call-item__butn">
+                        <button class="butn butn--md butn--blue">Принять звонок</button>
+                      </div>
+                    </div>
+                    <div class="call-item">
+                      <div class="call-item__client">
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-name">Марина</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-phone">+375 29 555 77 00</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <div class="rate"><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--half"></span><span class="rate-star rate-star--empt"></span><span class="rate-star rate-star--empt"></span></div>
+                        </div>
+                      </div>
+                      <div class="call-item__delay color-red">
+                        <p class="call-item__delay-time">1 минута</p>
+                        <p class="call-item__delay-descr">в ожидании</p>
+                      </div>
+                      <div class="call-item__butn">
+                        <button class="butn butn--md butn--blue">Принять звонок</button>
+                      </div>
+                    </div>
+                    <div class="call-item call-item--outbase">
+                      <div class="call-item__client">
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-name">Нет в базе</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-phone">+375 29 555 77 00</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <div class="rate"><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--half"></span><span class="rate-star rate-star--empt"></span><span class="rate-star rate-star--empt"></span></div>
+                        </div>
+                      </div>
+                      <div class="call-item__delay">
+                        <p class="call-item__delay-time">40 секунд</p>
+                        <p class="call-item__delay-descr">в ожидании</p>
+                      </div>
+                      <div class="call-item__butn">
+                        <button class="butn butn--md butn--blue">Принять звонок</button>
+                      </div>
+                    </div>
+                    <div class="call-item">
+                      <div class="call-item__client">
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-name">Марина</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-phone">+375 29 555 77 00</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <div class="rate"><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--half"></span><span class="rate-star rate-star--empt"></span><span class="rate-star rate-star--empt"></span></div>
+                        </div>
+                      </div>
+                      <div class="call-item__delay color-red">
+                        <p class="call-item__delay-time">1 минута</p>
+                        <p class="call-item__delay-descr">в ожидании</p>
+                      </div>
+                      <div class="call-item__butn">
+                        <button class="butn butn--md butn--blue">Принять звонок</button>
+                      </div>
+                    </div>
+                    <div class="call-item call-item--outbase">
+                      <div class="call-item__client">
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-name">Нет в базе</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <p class="call-item__client-phone">+375 29 555 77 00</p>
+                        </div>
+                        <div class="call-item__client-field">
+                          <div class="rate"><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--full"></span><span class="rate-star rate-star--half"></span><span class="rate-star rate-star--empt"></span><span class="rate-star rate-star--empt"></span></div>
+                        </div>
+                      </div>
+                      <div class="call-item__delay">
+                        <p class="call-item__delay-time">40 секунд</p>
+                        <p class="call-item__delay-descr">в ожидании</p>
+                      </div>
+                      <div class="call-item__butn">
+                        <button class="butn butn--md butn--blue">Принять звонок</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-line__right">
+                  <div class="main-line__header">
+                    <div class="main-line__header-wrap">
+                      <div class="main-line__header-menu">
+                        <ul class="main-line__header-menu-list">
+                          <li class="main-line__header-menu-item fw500">Всего</li>
+                          <li class="main-line__header-menu-item color-gray fw600">Оф-лайн</li>
+                          <li class="main-line__header-menu-item color-green fw600">Свободные</li>
+                          <li class="main-line__header-menu-item color-red fw600">На заказе</li>
+                        </ul>
+                      </div>
+                      <div class="main-line__header-switches">
+                        <div class="main-line__header-switch main-line__header-switch--map js_icon-map">
+                          <svg class="icon-svg">
+                            <use xlink:href="./img/sprite.svg#glob"></use>
+                          </svg>
+                        </div>
+                        <div class="main-line__header-switch main-line__header-switch--list js_icon-list">
+                          <svg class="icon-svg">
+                            <use xlink:href="./img/sprite.svg#list"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="map-wrap" id="map"></div>
                 </div>
               </div>
             </div>

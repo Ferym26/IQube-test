@@ -3,3 +3,39 @@
 .main-page
 	display: flex
 	height: 100vh
+
+
+
+.color
+
+	&-grey
+		color: #828282
+
+	&-green
+		color: #4caf50
+
+	&-red
+		color: #e64a19
+
+
+
+.rate
+	display: flex
+
+	.rate-star
+		display: block
+		+size(15px, 14px)								
+		background-size: cover
+
+		&:not(:last-child)
+			margin-right: 5px
+
+
+		&--full
+			background: url(../img/star-full.svg) no-repeat 50% 50%
+
+		&--half
+			background: url(../img/star-half.svg) no-repeat 50% 50%
+
+		&--empt
+			background: url(../img/star-empt.svg) no-repeat 50% 50%

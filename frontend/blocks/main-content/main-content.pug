@@ -23,16 +23,221 @@
 				.top-line__right
 
 					.search-top
-						+svg("search", "icon-svg")
+						.search-top__field
+							input(type="search", name="")
+						.search-top__icon
+							+svg("search", "icon-svg")
 
 					.notific-top
-						+svg("ding", "icon-svg")
+						.notific-top__icon
+							+svg("ding", "icon-svg")
+						.notific-top__count 5
+						.notific-top__popup
 
 					.user-top
-
 						.user-top__ava
 							img.user-top__ava-img(src="img/disp-ava.jpg", alt="user avatar")
-
 						.user-top__descr
 							p.user-top__name Анна Лисичкина
 							p.user-top__prof Диспетчер
+
+		.main-line
+
+			.main-line__inner
+
+				.main-line__left
+
+					.call-header
+						.call-header__inner
+							.call-header__icon
+								+svg("taxi", "icon-svg")
+							.call-header__menu
+								ul.call-header__menu-list
+									li.call-header__menu-item Всего: #[span.call-header__menu-item-num.js_call-menu-item__all 10]
+									li.call-header__menu-item.color-gray Оф-лайн: #[span.call-header__menu-item-num.js_call-menu-item__off 1]
+									li.call-header__menu-item.color-green Свободные: #[span.call-header__menu-item-num.js_call-menu-item__free 4]
+									li.call-header__menu-item.color-red На заказе: #[span.call-header__menu-item-num.js_call-menu-item__busy 5]
+
+
+					.call-wrap
+
+						.call-item
+							.call-item__client
+								.call-item__client-field
+									p.call-item__client-name Марина
+								.call-item__client-field
+									p.call-item__client-phone +375 29 555 77 00
+								.call-item__client-field
+									.rate
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--half
+										span.rate-star.rate-star--empt
+										span.rate-star.rate-star--empt
+							.call-item__delay.color-red
+								p.call-item__delay-time 1 минута
+								p.call-item__delay-descr в ожидании
+							.call-item__butn
+								button.butn.butn--md.butn--blue Принять звонок
+
+
+						.call-item.call-item--outbase
+							.call-item__client
+								.call-item__client-field
+									p.call-item__client-name Нет в базе
+								.call-item__client-field
+									p.call-item__client-phone +375 29 555 77 00
+								.call-item__client-field
+									.rate
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--half
+										span.rate-star.rate-star--empt
+										span.rate-star.rate-star--empt
+							.call-item__delay
+								p.call-item__delay-time 40 секунд
+								p.call-item__delay-descr в ожидании
+							.call-item__butn
+								button.butn.butn--md.butn--blue Принять звонок
+
+						.call-item
+							.call-item__client
+								.call-item__client-field
+									p.call-item__client-name Марина
+								.call-item__client-field
+									p.call-item__client-phone +375 29 555 77 00
+								.call-item__client-field
+									.rate
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--half
+										span.rate-star.rate-star--empt
+										span.rate-star.rate-star--empt
+							.call-item__delay.color-red
+								p.call-item__delay-time 1 минута
+								p.call-item__delay-descr в ожидании
+							.call-item__butn
+								button.butn.butn--md.butn--blue Принять звонок
+
+
+						.call-item.call-item--outbase
+							.call-item__client
+								.call-item__client-field
+									p.call-item__client-name Нет в базе
+								.call-item__client-field
+									p.call-item__client-phone +375 29 555 77 00
+								.call-item__client-field
+									.rate
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--half
+										span.rate-star.rate-star--empt
+										span.rate-star.rate-star--empt
+							.call-item__delay
+								p.call-item__delay-time 40 секунд
+								p.call-item__delay-descr в ожидании
+							.call-item__butn
+								button.butn.butn--md.butn--blue Принять звонок
+
+						.call-item
+							.call-item__client
+								.call-item__client-field
+									p.call-item__client-name Марина
+								.call-item__client-field
+									p.call-item__client-phone +375 29 555 77 00
+								.call-item__client-field
+									.rate
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--half
+										span.rate-star.rate-star--empt
+										span.rate-star.rate-star--empt
+							.call-item__delay.color-red
+								p.call-item__delay-time 1 минута
+								p.call-item__delay-descr в ожидании
+							.call-item__butn
+								button.butn.butn--md.butn--blue Принять звонок
+
+
+						.call-item.call-item--outbase
+							.call-item__client
+								.call-item__client-field
+									p.call-item__client-name Нет в базе
+								.call-item__client-field
+									p.call-item__client-phone +375 29 555 77 00
+								.call-item__client-field
+									.rate
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--half
+										span.rate-star.rate-star--empt
+										span.rate-star.rate-star--empt
+							.call-item__delay
+								p.call-item__delay-time 40 секунд
+								p.call-item__delay-descr в ожидании
+							.call-item__butn
+								button.butn.butn--md.butn--blue Принять звонок
+
+						.call-item
+							.call-item__client
+								.call-item__client-field
+									p.call-item__client-name Марина
+								.call-item__client-field
+									p.call-item__client-phone +375 29 555 77 00
+								.call-item__client-field
+									.rate
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--half
+										span.rate-star.rate-star--empt
+										span.rate-star.rate-star--empt
+							.call-item__delay.color-red
+								p.call-item__delay-time 1 минута
+								p.call-item__delay-descr в ожидании
+							.call-item__butn
+								button.butn.butn--md.butn--blue Принять звонок
+
+
+						.call-item.call-item--outbase
+							.call-item__client
+								.call-item__client-field
+									p.call-item__client-name Нет в базе
+								.call-item__client-field
+									p.call-item__client-phone +375 29 555 77 00
+								.call-item__client-field
+									.rate
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--full
+										span.rate-star.rate-star--half
+										span.rate-star.rate-star--empt
+										span.rate-star.rate-star--empt
+							.call-item__delay
+								p.call-item__delay-time 40 секунд
+								p.call-item__delay-descr в ожидании
+							.call-item__butn
+								button.butn.butn--md.butn--blue Принять звонок
+
+
+
+
+
+
+
+				.main-line__right
+
+					.main-line__header
+						.main-line__header-wrap
+							.main-line__header-menu
+								ul.main-line__header-menu-list
+									li.main-line__header-menu-item.fw500 Всего
+									li.main-line__header-menu-item.color-gray.fw600 Оф-лайн
+									li.main-line__header-menu-item.color-green.fw600 Свободные
+									li.main-line__header-menu-item.color-red.fw600 На заказе
+							.main-line__header-switches
+								.main-line__header-switch.main-line__header-switch--map.js_icon-map
+									+svg("glob", "icon-svg")
+								.main-line__header-switch.main-line__header-switch--list.js_icon-list
+									+svg("list", "icon-svg")
+
+
+					.map-wrap#map
