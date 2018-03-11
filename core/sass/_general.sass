@@ -8,14 +8,14 @@
 
 .color
 
-	&-grey
-		color: #828282
+	&-gray
+		color: $color-gray
 
 	&-green
-		color: #4caf50
+		color: $color-green
 
 	&-red
-		color: #e64a19
+		color: $color-red
 
 
 
@@ -23,7 +23,7 @@
 	display: flex
 
 	.rate-star
-		display: block
+		display: inline-block
 		+size(15px, 14px)								
 		background-size: cover
 
@@ -39,3 +39,10 @@
 
 		&--empt
 			background: url(../img/star-empt.svg) no-repeat 50% 50%
+
+
+.is-hidden
+	display: none !important
+	
+.is-visible
+	display: block !important

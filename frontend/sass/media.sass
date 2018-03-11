@@ -3,15 +3,268 @@
 // @import "../../core/sprites/png/_sprite.scss"
 
 
-@media only screen and (max-width : 1023px)
-	@import "media/_media1"
+@media only screen and (max-width : 1700px)
+	
+	.main-content
 
-@media only screen and (max-width : 767px)
-	@import "media/_media2"
+		.main-line
+
+			&__left 
+
+				.call-header
+
+					&__menu
+						margin-left: 20px
+
+						&-item
+
+							&:not(:last-child)
+								margin-right: 15px
+
+			&__header
+
+				&-menu-item
+
+					&:not(:last-child)
+						margin-right: 15px
 
 
-// @media only screen and (max-width : 480px)
-// 	@import "media/_media3"
 
-// @media only screen and (max-width : 575px)
-// 	@import "media/_media4"
+
+
+
+
+
+
+@media only screen and (max-width : 1440px)
+
+	.main-menu
+		width: 260px
+
+		&__list
+
+			&-item
+
+				&-text
+					padding-left: 50px
+
+				&-icon
+					left: 20px
+
+		.tariff
+
+			&__inner
+				padding: 15px
+
+			&__title
+				padding-left: 50px
+
+			&__item
+
+				&-wrap
+					padding-left: 0
+					padding-top: 25px
+
+				&-icon
+					+wcenter
+
+
+
+
+
+
+
+
+
+	.main-content
+		width: calc(100vw - 260px)
+
+		.main-line
+
+			&__left
+				width: 45%
+
+				.call
+
+					&-header
+
+						&__menu-item-num
+							display: block
+							text-align: center
+
+					&-item
+
+						.butn
+							padding: 0
+
+							&--md
+								min-width: 70px
+								height: 55px
+
+							&-text
+								display: none
+
+							.icon-call
+								display: block
+								margin: 0 auto
+								width: 35px
+								height: 35px
+
+								.icon-svg
+									fill: #fff
+
+			&__drivers-list
+
+				.driver
+
+					&-info
+						padding: 15px
+
+						&__tariff
+							margin-right: 10px
+
+						&__number
+							margin-right: 10px
+
+						&__meta-fio
+							margin-left: 12px
+
+			&__right
+				width: 55%
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 1365px)
+
+	.wrapper
+
+
+	.main-menu
+		width: 100px		
+
+		&__inner
+			position: relative
+			padding: 0 0 20px
+			overflow-y: inherit
+			z-index: 200
+
+
+
+		.logo
+			padding: 0 5px
+
+			&__inner
+				justify-content: center
+
+			.logo-big
+				display: none
+
+			.logo-small
+				display: block
+
+		
+
+		&__list-item
+			z-index: 100
+
+			&:hover
+
+				.main-menu__list-item-text
+					left: 100%
+
+			&-icon
+				+center
+				z-index: 100
+
+			&-text
+				position: absolute
+				+hcenter
+				left: -200%
+				height: 62px
+				padding: 0 15px
+				margin-left: 0
+				background-color: lighten($color-bg-dark, 6%)
+				white-space: nowrap
+
+				font-size: 16px
+				line-height: 62px
+
+				transition: all 0.2s ease-in-out
+				
+
+		.tariff
+			display: none
+
+
+
+
+
+
+
+	.main-content
+		width: calc(100vw - 100px)
+
+		.main-line
+
+			&__drivers-list 
+
+				.driver
+
+					&-info						
+
+						
+
+			&__left
+				width: 30%
+
+				.call-wrap
+
+				.call
+
+					&-header
+
+						&__inner
+							height: auto
+							padding: 5px 10px
+
+						&__icon
+							display: none
+
+						&__menu
+							margin-left: 0
+
+							&-list
+								flex-direction: column
+
+							&-item
+
+								&-num
+									display: inline-block
+
+					&-item
+						padding: 10px
+						flex-wrap: wrap
+						align-content: stretch
+						justify-content: center
+
+						&__client
+							width: 100%
+							margin: 0 0 10px
+							text-align: center
+
+							.rate
+								display: inline-flex
+
+						&__butn
+							margin-left: 30px
+
+			&__right
+				width: 70%
+
+

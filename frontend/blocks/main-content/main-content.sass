@@ -32,7 +32,7 @@
 
 
 		.time-box
-			
+			margin-left: 25px
 
 
 
@@ -156,8 +156,7 @@
 
 
 				&-header
-					margin: 0 0 15px
-					
+					margin: 0 0 15px					
 					box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05)
 					z-index: 100
 
@@ -165,7 +164,7 @@
 						display: flex
 						align-items: center
 						height: 50px
-						padding: 0 25px	
+						padding: 5px 25px	
 						background-color: #fff
 
 					&:after
@@ -182,7 +181,8 @@
 						.icon-svg
 							fill: #1e1e1e
 
-					&__menu						
+					&__menu
+						margin-left: 50px					
 
 						&-list
 							display: flex
@@ -190,9 +190,12 @@
 						&-item
 							font-size: 16px
 
+							&:not(:last-child)
+								margin-right: 45px
+
 							&-num
 								font-size: 18px
-								font-weight: 500
+								font-weight: 600
 
 
 
@@ -212,7 +215,7 @@
 					&__client
 
 						&-name
-							font-weight: 500
+							font-weight: 600
 
 						
 
@@ -259,9 +262,18 @@
 			box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05)
 			z-index: 100
 
+			&:after
+				+pseudo
+				+size(100%, 15px)
+				left: 0
+				right: 0
+				bottom: 100%
+				background-color: #edf0f5
+
 			&-wrap
 				display: flex
 				align-items: center
+				justify-content: space-between
 				height: 50px
 				padding: 0 25px	
 				background-color: #fff
@@ -277,19 +289,106 @@
 
 				&-list
 					display: flex
+					align-items: center
 
 				&-item
 					font-size: 16px
+					font-weight: 600
+
+					&:not(:last-child)
+						margin-right: 30px
 
 					&-num
 						font-size: 18px
-						font-weight: 500
+						font-weight: 600
+
+					.item-radio
+
+						&:checked,
+						&:not(:checked)
+							position: absolute
+							left: -9999px
+
+						&:checked + label,
+						&:not(:checked) + label
+							position: relative
+							padding-left: 28px
+							cursor: pointer							
+							display: inline-block
+							
+						&:checked + label:before,
+						&:not(:checked) + label:before
+							content: ''
+							position: absolute
+							left: 0
+							+hcenter
+							width: 20px
+							height: 20px
+							border: 2px solid #757575
+							border-radius: 100%
+							
+
+						&:checked + label:after
+							content: ''
+							width: 12px
+							height: 12px							
+							position: absolute
+							top: 50%
+							transform: translate(0, -50%)
+							left: 4px
+							border-radius: 100%
+							transition: all 0.2s ease
+
+						&:not(:checked) + label:after
+							content: ''
+							width: 12px
+							height: 12px							
+							position: absolute
+							top: 50%
+							transform: translate(0, -50%)
+							left: 4px
+							border-radius: 100%
+							transition: all 0.2s ease
+							opacity: 0
+							transform: scale(0) translate(0, -50%)
+
+						&:checked + label:after
+							opacity: 1
+							transform: scale(1) translate(0, -50%)
+
+						&#all
+							&:checked + label:after
+								background-color: $color-accent
+							&:not(:checked) + label:after
+								background-color: $color-accent
+
+						&#off
+							&:checked + label:after
+								background-color: #828282
+							&:not(:checked) + label:after
+								background-color: #828282
+
+						&#free
+							&:checked + label:after
+								background-color: #4caf50
+							&:not(:checked) + label:after
+								background-color: #4caf50
+
+						&#busy
+							&:checked + label:after
+								background-color: #e64a19
+							&:not(:checked) + label:after
+								background-color: #e64a19
+
+
+					.item-label
 
 			&-switches
 				display: flex
 				align-items: center
 
 			&-switch
+				margin-left: 25px
 				cursor: pointer
 
 				&:hover
@@ -310,10 +409,249 @@
 						fill: #000
 
 
+		&__zoom
+			position: absolute
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: space-around
+			top: 87px
+			right: 20px
+			+size(30px, 60px)
+			box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05)
+			background-color: #fff
+			z-index: 100
+
+			.butn-zoom
+				+size(20px, 20px)
+				cursor: pointer
+
+				&:hover
+
+					.icon-svg
+						fill: $color-accent
+
+				&--in
+
+				&--out
+	
+
+
+
+		&__cars
+
+			.car
+				position: absolute				
+				+size(55px, 55px)
+				+circle				
+				z-index: 90
+				cursor: pointer
+
+				&:after
+					+pseudo
+					+center					
+					z-index: 91
+
+				&:hover
+
+					.car-info
+						visibility: visible
+						opacity: 1
+						bottom: 65px
+
+
+				&--busy
+					background-color: rgba($color-red, 0.3)
+					&:after
+						+arr(32, 30, $color-red, r)
+
+				&--free
+					background-color: rgba($color-green, 0.3)
+					&:after
+						+arr(32, 30, $color-green, r)
+
+				&--off
+					background-color: rgba($color-gray, 0.3)
+					&:after
+						+arr(32, 30, $color-gray, r)
+
+				&#driver-001
+					top: 300px
+					left: 100px
+
+				&#driver-002
+					top: 400px
+					left: 100px
+
+				&#driver-003
+					top: 500px
+					left: 100px
 
 
 
 
+
+				&-info
+					visibility: hidden
+					opacity: 0
+					position: absolute
+					+wcenter
+					bottom: 50px
+					width: 230px
+					border-radius: 5px
+					background-color: #fff
+					box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05)	
+					transition: all 0.3s ease-in-out		
+			
+
+					&__inner
+						padding: 15px
+
+					&__model						
+
+						.model
+							display: inline-block
+							font-size: 16px
+							font-weight: 600
+
+						.number
+							display: inline-block
+							margin-left: 10px
+							font-size: 14px
+
+					&__tariff
+						font-size: 14px
+
+					&__driver
+						display: flex
+						align-items: center
+						margin: 9px 0 0
+
+						&-ava
+							+size(60px, 60px)
+							+circle
+							overflow: hidden
+
+
+						&-meta
+							width: 140px
+							padding-left: 15px
+
+							.rate
+								margin: 8px 0 0
+
+						&-name
+
+
+					.angle
+						position: absolute
+						+size(28px, 28px)
+						+wcenter
+						bottom: -28px
+
+						svg
+							fill: #fff
+
+				&-time
+					position: absolute
+					+wcenter
+					bottom: -35px
+					border: 1px solid $color-red
+					border-radius: 5px
+					background-color: #fff
+
+					padding: 6px 8px
+					line-height: 1
+					color: $color-red
+					font-size: 16px
+					font-weight: 600
+
+					&__num
+
+					&__unit
+						margin-left: 5px
+
+
+
+
+
+
+
+		&__drivers-list
+			padding: 80px 20px 15px 10px
+			height: calc(100vh - 100px)
+			overflow-y: scroll
+
+			.driver-info
+				display: flex
+				justify-content: space-between
+				align-items: center	
+				width: 100%	
+				padding: 17px 55px 17px 20px
+				background-color: #fff
+
+				&:not(:last-child)
+					margin: 0 0 15px
+
+				&__tariff
+					width: 80px
+
+					&-text
+						margin: 0 0 5px
+
+					&-carmodel
+
+				&__number
+					width: 100px
+
+					&-text
+
+				&__meta
+					display: flex
+					align-items: center
+					width: 200px
+
+					&-ava
+
+					&-fio
+						margin-left: 22px
+
+					&-name
+						margin: 0 0 8px
+
+					&-surname
+
+				&__status
+					width: 150px
+
+
+
+
+				&.is-busy
+
+					.driver-info
+
+						&__status
+							color: $color-red
+
+							&--visible
+								display: block
+
+							&--hidden
+								display: none
+
+				&.is-free
+
+					.driver-info
+
+						&__status
+							color: $color-green
+
+							&--visible
+								display: none
+
+							&--hidden
+								display: block
 
 
 

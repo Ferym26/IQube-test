@@ -16,8 +16,11 @@
 
 		&__inner
 			display: flex
-			align-items: center
+			align-items: center			
 			height: 100px
+
+		.logo-small
+			display: none
 
 
 
@@ -59,9 +62,11 @@
 			color: #2e3e4f
 			background-color: #edf0f5
 
+		&__list
+			margin: 20px 0 0
+
 
 		&__title
-			margin: 0 0 20px
 			padding-left: 85px
 			cursor: pointer
 
@@ -74,6 +79,10 @@
 				+hcenter
 				right: -20px
 				+arr(10, 6, $color-bg-dark, t)
+				transition: transform 0.2s ease-in-out
+
+				&.is-bottom
+					+rotate(180)
 
 
 		&__item

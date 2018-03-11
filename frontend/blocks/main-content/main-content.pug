@@ -78,7 +78,10 @@
 								p.call-item__delay-time 1 минута
 								p.call-item__delay-descr в ожидании
 							.call-item__butn
-								button.butn.butn--md.butn--blue Принять звонок
+								button.butn.butn--md.butn--blue
+									span.butn-text Принять звонок
+									.icon-call
+										+svg("call-answer", "icon-svg")
 
 
 						.call-item.call-item--outbase
@@ -98,7 +101,10 @@
 								p.call-item__delay-time 40 секунд
 								p.call-item__delay-descr в ожидании
 							.call-item__butn
-								button.butn.butn--md.butn--blue Принять звонок
+								button.butn.butn--md.butn--blue
+									span.butn-text Принять звонок
+									.icon-call
+										+svg("call-answer", "icon-svg")
 
 						.call-item
 							.call-item__client
@@ -117,7 +123,10 @@
 								p.call-item__delay-time 1 минута
 								p.call-item__delay-descr в ожидании
 							.call-item__butn
-								button.butn.butn--md.butn--blue Принять звонок
+								button.butn.butn--md.butn--blue
+									span.butn-text Принять звонок
+									.icon-call
+										+svg("call-answer", "icon-svg")
 
 
 						.call-item.call-item--outbase
@@ -137,7 +146,10 @@
 								p.call-item__delay-time 40 секунд
 								p.call-item__delay-descr в ожидании
 							.call-item__butn
-								button.butn.butn--md.butn--blue Принять звонок
+								button.butn.butn--md.butn--blue
+									span.butn-text Принять звонок
+									.icon-call
+										+svg("call-answer", "icon-svg")
 
 						.call-item
 							.call-item__client
@@ -156,7 +168,10 @@
 								p.call-item__delay-time 1 минута
 								p.call-item__delay-descr в ожидании
 							.call-item__butn
-								button.butn.butn--md.butn--blue Принять звонок
+								button.butn.butn--md.butn--blue
+									span.butn-text Принять звонок
+									.icon-call
+										+svg("call-answer", "icon-svg")
 
 
 						.call-item.call-item--outbase
@@ -176,7 +191,10 @@
 								p.call-item__delay-time 40 секунд
 								p.call-item__delay-descr в ожидании
 							.call-item__butn
-								button.butn.butn--md.butn--blue Принять звонок
+								button.butn.butn--md.butn--blue
+									span.butn-text Принять звонок
+									.icon-call
+										+svg("call-answer", "icon-svg")
 
 						.call-item
 							.call-item__client
@@ -195,7 +213,10 @@
 								p.call-item__delay-time 1 минута
 								p.call-item__delay-descr в ожидании
 							.call-item__butn
-								button.butn.butn--md.butn--blue Принять звонок
+								button.butn.butn--md.butn--blue
+									span.butn-text Принять звонок
+									.icon-call
+										+svg("call-answer", "icon-svg")
 
 
 						.call-item.call-item--outbase
@@ -215,7 +236,10 @@
 								p.call-item__delay-time 40 секунд
 								p.call-item__delay-descr в ожидании
 							.call-item__butn
-								button.butn.butn--md.butn--blue Принять звонок
+								button.butn.butn--md.butn--blue
+									span.butn-text Принять звонок
+									.icon-call
+										+svg("call-answer", "icon-svg")
 
 
 
@@ -229,15 +253,340 @@
 						.main-line__header-wrap
 							.main-line__header-menu
 								ul.main-line__header-menu-list
-									li.main-line__header-menu-item.fw500 Всего
-									li.main-line__header-menu-item.color-gray.fw600 Оф-лайн
-									li.main-line__header-menu-item.color-green.fw600 Свободные
-									li.main-line__header-menu-item.color-red.fw600 На заказе
+									li.main-line__header-menu-item
+										input#all.item-radio(type="radio" name="status" checked)
+										label(for="all").item-label Всего
+									li.main-line__header-menu-item
+										input#off.item-radio(type="radio" name="status")
+										label(for="off").item-label.color-gray Оф-лайн
+									li.main-line__header-menu-item
+										input#free.item-radio(type="radio" name="status")
+										label(for="free").item-label.color-green Свободные
+									li.main-line__header-menu-item
+										input#busy.item-radio(type="radio" name="status")
+										label(for="busy").item-label.color-red На заказе
 							.main-line__header-switches
 								.main-line__header-switch.main-line__header-switch--map.js_icon-map
 									+svg("glob", "icon-svg")
 								.main-line__header-switch.main-line__header-switch--list.js_icon-list
 									+svg("list", "icon-svg")
 
+					.main-line__ui.is-hidden
 
-					.map-wrap#map
+						.main-line__zoom
+							.butn-zoom.butn-zoom--in
+								+svg("zoom-in", "icon-svg")
+							.butn-zoom.butn-zoom--out
+								+svg("zoom-out", "icon-svg")
+
+						.main-line__cars
+
+							.car.car--busy#driver-001
+								.car-time
+									span.car-time__num 7
+									span.car-time__unit мин
+								.car-info
+									.car-info__inner
+										.car-info__model
+											.model VW Golf
+											.number 4465 TH-7
+										.car-info__tariff Стандарт
+										.car-info__driver
+											.car-info__driver-ava
+												img(src="img/driver-ava--1.jpg", alt="drivers avatar")
+											.car-info__driver-meta
+												.car-info__driver-meta-field
+													h4.car-info__driver-meta-name Максим Волков
+												.rate
+													span.rate-star.rate-star--full
+													span.rate-star.rate-star--full
+													span.rate-star.rate-star--full
+													span.rate-star.rate-star--half
+													span.rate-star.rate-star--empt
+										+span-angle("bottom")
+
+
+
+							.car.car--free#driver-002
+							.car.car--off#driver-003
+
+
+					.main-line__drivers-list.is-visible
+
+						.driver-info.is-busy
+							.driver-info__tariff
+								p.driver-info__tariff-text Стандарт
+								h3.driver-info__tariff-carmodel Kia Rio
+							.driver-info__number
+								p.driver-info__number-text 9956 КМ-7
+								p.driver-info__number-text Чёрный
+							.driver-info__meta
+								.driver-info__meta-ava
+									img(src="img/driver-ava--1.jpg", alt="driver avatar")
+								.driver-info__meta-fio
+									h3.driver-info__meta-name Евгений
+									h3.driver-info__meta-surname Иванов
+							.driver-info__status.driver-info__status--visible
+								.driver-info__status-time
+									span.driver-info__status-time-num 7
+									span.driver-info__status-time-unit минут
+								.driver-info__status-state
+									p.driver-info__status-state-text Выполняет заказ
+							.driver-info__status.driver-info__status--hidden
+								.driver-info__status-state
+									p.driver-info__status-state-text Свободен
+
+						.driver-info.is-free
+							.driver-info__tariff
+								p.driver-info__tariff-text Стандарт
+								h3.driver-info__tariff-carmodel Kia Rio
+							.driver-info__number
+								p.driver-info__number-text 9956 КМ-7
+								p.driver-info__number-text Чёрный
+							.driver-info__meta
+								.driver-info__meta-ava
+									img(src="img/driver-ava--1.jpg", alt="driver avatar")
+								.driver-info__meta-fio
+									h3.driver-info__meta-name Евгений
+									h3.driver-info__meta-surname Иванов
+							.driver-info__status.driver-info__status--visible
+								.driver-info__status-time
+									span.driver-info__status-time-num 7
+									span.driver-info__status-time-unit минут
+								.driver-info__status-state
+									p.driver-info__status-state-text Выполняет заказ
+							.driver-info__status.driver-info__status--hidden
+								.driver-info__status-state
+									p.driver-info__status-state-text Свободен
+
+						.driver-info.is-busy
+							.driver-info__tariff
+								p.driver-info__tariff-text Стандарт
+								h3.driver-info__tariff-carmodel Kia Rio
+							.driver-info__number
+								p.driver-info__number-text 9956 КМ-7
+								p.driver-info__number-text Чёрный
+							.driver-info__meta
+								.driver-info__meta-ava
+									img(src="img/driver-ava--1.jpg", alt="driver avatar")
+								.driver-info__meta-fio
+									h3.driver-info__meta-name Евгений
+									h3.driver-info__meta-surname Иванов
+							.driver-info__status.driver-info__status--visible
+								.driver-info__status-time
+									span.driver-info__status-time-num 7
+									span.driver-info__status-time-unit минут
+								.driver-info__status-state
+									p.driver-info__status-state-text Выполняет заказ
+							.driver-info__status.driver-info__status--hidden
+								.driver-info__status-state
+									p.driver-info__status-state-text Свободен
+
+						.driver-info.is-free
+							.driver-info__tariff
+								p.driver-info__tariff-text Стандарт
+								h3.driver-info__tariff-carmodel Kia Rio
+							.driver-info__number
+								p.driver-info__number-text 9956 КМ-7
+								p.driver-info__number-text Чёрный
+							.driver-info__meta
+								.driver-info__meta-ava
+									img(src="img/driver-ava--1.jpg", alt="driver avatar")
+								.driver-info__meta-fio
+									h3.driver-info__meta-name Евгений
+									h3.driver-info__meta-surname Иванов
+							.driver-info__status.driver-info__status--visible
+								.driver-info__status-time
+									span.driver-info__status-time-num 7
+									span.driver-info__status-time-unit минут
+								.driver-info__status-state
+									p.driver-info__status-state-text Выполняет заказ
+							.driver-info__status.driver-info__status--hidden
+								.driver-info__status-state
+									p.driver-info__status-state-text Свободен
+
+						.driver-info.is-busy
+							.driver-info__tariff
+								p.driver-info__tariff-text Стандарт
+								h3.driver-info__tariff-carmodel Kia Rio
+							.driver-info__number
+								p.driver-info__number-text 9956 КМ-7
+								p.driver-info__number-text Чёрный
+							.driver-info__meta
+								.driver-info__meta-ava
+									img(src="img/driver-ava--1.jpg", alt="driver avatar")
+								.driver-info__meta-fio
+									h3.driver-info__meta-name Евгений
+									h3.driver-info__meta-surname Иванов
+							.driver-info__status.driver-info__status--visible
+								.driver-info__status-time
+									span.driver-info__status-time-num 7
+									span.driver-info__status-time-unit минут
+								.driver-info__status-state
+									p.driver-info__status-state-text Выполняет заказ
+							.driver-info__status.driver-info__status--hidden
+								.driver-info__status-state
+									p.driver-info__status-state-text Свободен
+
+						.driver-info.is-free
+							.driver-info__tariff
+								p.driver-info__tariff-text Стандарт
+								h3.driver-info__tariff-carmodel Kia Rio
+							.driver-info__number
+								p.driver-info__number-text 9956 КМ-7
+								p.driver-info__number-text Чёрный
+							.driver-info__meta
+								.driver-info__meta-ava
+									img(src="img/driver-ava--1.jpg", alt="driver avatar")
+								.driver-info__meta-fio
+									h3.driver-info__meta-name Евгений
+									h3.driver-info__meta-surname Иванов
+							.driver-info__status.driver-info__status--visible
+								.driver-info__status-time
+									span.driver-info__status-time-num 7
+									span.driver-info__status-time-unit минут
+								.driver-info__status-state
+									p.driver-info__status-state-text Выполняет заказ
+							.driver-info__status.driver-info__status--hidden
+								.driver-info__status-state
+									p.driver-info__status-state-text Свободен
+
+						.driver-info.is-busy
+							.driver-info__tariff
+								p.driver-info__tariff-text Стандарт
+								h3.driver-info__tariff-carmodel Kia Rio
+							.driver-info__number
+								p.driver-info__number-text 9956 КМ-7
+								p.driver-info__number-text Чёрный
+							.driver-info__meta
+								.driver-info__meta-ava
+									img(src="img/driver-ava--1.jpg", alt="driver avatar")
+								.driver-info__meta-fio
+									h3.driver-info__meta-name Евгений
+									h3.driver-info__meta-surname Иванов
+							.driver-info__status.driver-info__status--visible
+								.driver-info__status-time
+									span.driver-info__status-time-num 7
+									span.driver-info__status-time-unit минут
+								.driver-info__status-state
+									p.driver-info__status-state-text Выполняет заказ
+							.driver-info__status.driver-info__status--hidden
+								.driver-info__status-state
+									p.driver-info__status-state-text Свободен
+
+						.driver-info.is-free
+							.driver-info__tariff
+								p.driver-info__tariff-text Стандарт
+								h3.driver-info__tariff-carmodel Kia Rio
+							.driver-info__number
+								p.driver-info__number-text 9956 КМ-7
+								p.driver-info__number-text Чёрный
+							.driver-info__meta
+								.driver-info__meta-ava
+									img(src="img/driver-ava--1.jpg", alt="driver avatar")
+								.driver-info__meta-fio
+									h3.driver-info__meta-name Евгений
+									h3.driver-info__meta-surname Иванов
+							.driver-info__status.driver-info__status--visible
+								.driver-info__status-time
+									span.driver-info__status-time-num 7
+									span.driver-info__status-time-unit минут
+								.driver-info__status-state
+									p.driver-info__status-state-text Выполняет заказ
+							.driver-info__status.driver-info__status--hidden
+								.driver-info__status-state
+									p.driver-info__status-state-text Свободен
+
+						.driver-info.is-busy
+							.driver-info__tariff
+								p.driver-info__tariff-text Стандарт
+								h3.driver-info__tariff-carmodel Kia Rio
+							.driver-info__number
+								p.driver-info__number-text 9956 КМ-7
+								p.driver-info__number-text Чёрный
+							.driver-info__meta
+								.driver-info__meta-ava
+									img(src="img/driver-ava--1.jpg", alt="driver avatar")
+								.driver-info__meta-fio
+									h3.driver-info__meta-name Евгений
+									h3.driver-info__meta-surname Иванов
+							.driver-info__status.driver-info__status--visible
+								.driver-info__status-time
+									span.driver-info__status-time-num 7
+									span.driver-info__status-time-unit минут
+								.driver-info__status-state
+									p.driver-info__status-state-text Выполняет заказ
+							.driver-info__status.driver-info__status--hidden
+								.driver-info__status-state
+									p.driver-info__status-state-text Свободен
+
+						.driver-info.is-free
+							.driver-info__tariff
+								p.driver-info__tariff-text Стандарт
+								h3.driver-info__tariff-carmodel Kia Rio
+							.driver-info__number
+								p.driver-info__number-text 9956 КМ-7
+								p.driver-info__number-text Чёрный
+							.driver-info__meta
+								.driver-info__meta-ava
+									img(src="img/driver-ava--1.jpg", alt="driver avatar")
+								.driver-info__meta-fio
+									h3.driver-info__meta-name Евгений
+									h3.driver-info__meta-surname Иванов
+							.driver-info__status.driver-info__status--visible
+								.driver-info__status-time
+									span.driver-info__status-time-num 7
+									span.driver-info__status-time-unit минут
+								.driver-info__status-state
+									p.driver-info__status-state-text Выполняет заказ
+							.driver-info__status.driver-info__status--hidden
+								.driver-info__status-state
+									p.driver-info__status-state-text Свободен
+
+						.driver-info.is-busy
+							.driver-info__tariff
+								p.driver-info__tariff-text Стандарт
+								h3.driver-info__tariff-carmodel Kia Rio
+							.driver-info__number
+								p.driver-info__number-text 9956 КМ-7
+								p.driver-info__number-text Чёрный
+							.driver-info__meta
+								.driver-info__meta-ava
+									img(src="img/driver-ava--1.jpg", alt="driver avatar")
+								.driver-info__meta-fio
+									h3.driver-info__meta-name Евгений
+									h3.driver-info__meta-surname Иванов
+							.driver-info__status.driver-info__status--visible
+								.driver-info__status-time
+									span.driver-info__status-time-num 7
+									span.driver-info__status-time-unit минут
+								.driver-info__status-state
+									p.driver-info__status-state-text Выполняет заказ
+							.driver-info__status.driver-info__status--hidden
+								.driver-info__status-state
+									p.driver-info__status-state-text Свободен
+
+						.driver-info.is-free
+							.driver-info__tariff
+								p.driver-info__tariff-text Стандарт
+								h3.driver-info__tariff-carmodel Kia Rio
+							.driver-info__number
+								p.driver-info__number-text 9956 КМ-7
+								p.driver-info__number-text Чёрный
+							.driver-info__meta
+								.driver-info__meta-ava
+									img(src="img/driver-ava--1.jpg", alt="driver avatar")
+								.driver-info__meta-fio
+									h3.driver-info__meta-name Евгений
+									h3.driver-info__meta-surname Иванов
+							.driver-info__status.driver-info__status--visible
+								.driver-info__status-time
+									span.driver-info__status-time-num 7
+									span.driver-info__status-time-unit минут
+								.driver-info__status-state
+									p.driver-info__status-state-text Выполняет заказ
+							.driver-info__status.driver-info__status--hidden
+								.driver-info__status-state
+									p.driver-info__status-state-text Свободен
+
+					.map-wrap#map.is-hidden
